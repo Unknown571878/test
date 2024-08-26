@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <input type="text" id="text"/>
+    <button>클릭</button>
+    <div id="bbb"></div>
+    <script>
+        const button = document.querySelector('button');
+
+        button.addEventListener('click', () => {
+            // alert('버튼이 클랙되었습니다.');
+            const vv = document.querySelector('#text');
+            const div2  = document.createElement('div');
+            const create = document.createElement('p');
+            console.log(vv.value);
+            const p = document.getElementById('bbb');
+            const button2 = document.createElement('button');
+            button2.textContent = '삭제';
+            button2.addEventListener('click', () => {
+                p.removeChild(div2);
+            })
+            create.textContent = vv.value; 
+            div2.appendChild(create);
+            div2.appendChild(button2);
+            p.appendChild(div2);
+            text.value = "";
+        });
+
+    </script>
+</body>
+</html>
